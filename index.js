@@ -39,13 +39,13 @@ module.exports = {
     '@stylistic/array-element-newline': [
       'error',
       {
-        minItems: 2,
+        minItems: 1,
       },
     ],
     '@stylistic/array-bracket-newline': [
       'error',
       {
-        minItems: 2,
+        minItems: 1,
       },
     ],
     '@stylistic/object-property-newline': 'error',
