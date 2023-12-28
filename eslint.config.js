@@ -24,15 +24,37 @@ module.exports = {
     '**/*.d.ts',
   ],
   rules: {
+    'eqeqeq': 'error',
+    'function-paren-newline': [
+      'error',
+      {
+        minItems: 5,
+      },
+    ],
+    'no-unsafe-optional-chaining': 'error',
     'no-unused-vars': 'error',
     'no-var': 'error',
-    'eqeqeq': 'error',
     'prefer-const': [
       'error',
       {
         destructuring: 'all',
       },
     ],
+    'ts/consistent-type-imports': [
+      'error',
+      {
+        prefer: 'type-imports',
+        fixStyle: 'inline-type-imports',
+      },
+    ],
+    'ts/consistent-type-definitions': [
+      'error',
+      'type',
+    ],
+    'ts/no-inferrable-types': 'error',
+    'ts/no-unnecessary-condition': 'error',
+    'ts/no-unnecessary-type-assertion': 'error',
+    'ts/no-unnecessary-type-constraint': 'error',
     'ts/return-await': 'error',
     'ts/naming-convention': [
       'error',
@@ -75,33 +97,9 @@ module.exports = {
         ],
       },
     ],
-    'style/no-multiple-empty-lines': [
-      'error',
-      {
-        max: 1,
-      },
-    ],
-    'style/indent': [
-      'error',
-      2,
-    ],
-    'style/semi': [
-      'error',
-      'never',
-    ],
     'style/comma-dangle': [
       'error',
       'always-multiline',
-    ],
-    'style/quotes': [
-      'error',
-      'single',
-    ],
-    'style/array-element-newline': [
-      'error',
-      {
-        minItems: 1,
-      },
     ],
     'style/array-bracket-newline': [
       'error',
@@ -109,7 +107,38 @@ module.exports = {
         minItems: 1,
       },
     ],
-    'style/object-property-newline': 'error',
+    'style/array-element-newline': [
+      'error',
+      {
+        minItems: 1,
+      },
+    ],
+    'style/arrow-parens': 'error',
+    'style/indent': [
+      'error',
+      2,
+    ],
+    'style/linebreak-style': [
+      'error',
+      'unix',
+    ],
+    'style/multiline-ternary': 'error',
+    'style/no-multi-spaces': 'error',
+    'style/no-multiple-empty-lines': [
+      'error',
+      {
+        max: 1,
+      },
+    ],
     'style/object-curly-newline': 'error',
+    'style/object-property-newline': 'error',
+    'style/quotes': [
+      'error',
+      'single',
+    ],
+    'style/semi': [
+      'error',
+      'never',
+    ],
   },
 }
