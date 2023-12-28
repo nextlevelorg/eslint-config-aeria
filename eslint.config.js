@@ -33,7 +33,12 @@ module.exports = {
     ],
     'max-statements-per-line': 'error',
     'no-unsafe-optional-chaining': 'error',
-    'no-unused-vars': 'error',
+    'no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+      },
+    ],
     'no-var': 'error',
     'prefer-const': [
       'error',
@@ -98,6 +103,13 @@ module.exports = {
         ],
       },
     ],
+    'ts/type-annotation-spacing': [
+      'error',
+      {
+        before: false,
+        after: true,
+      },
+    ],
     'style/comma-dangle': [
       'error',
       'always-multiline',
@@ -130,6 +142,8 @@ module.exports = {
       'error',
       {
         max: 1,
+        maxBOF: 0,
+        maxEOF: 1,
       },
     ],
     'style/object-curly-newline': [
