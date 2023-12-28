@@ -10,47 +10,28 @@ module.exports = {
   languageOptions: {
     parser: parserTs,
     parserOptions: {
-      project: [
-        './tsconfig.json',
-      ],
+      project: ['./tsconfig.json'],
     },
   },
-  files: [
-    '**/*.js',
-    '**/*.ts',
-  ],
-  ignores: [
-    '**/dist/**',
-    '**/*.d.ts',
-  ],
+  files: ['**/*.js', '**/*.ts'],
+  ignores: ['**/dist/**', '**/*.d.ts'],
   rules: {
     'eqeqeq': 'error',
-    'function-paren-newline': [
-      'error',
-      {
-        minItems: 5,
-      },
-    ],
+    'function-paren-newline': ['error', {
+      minItems: 5,
+    }],
+    'max-statements-per-line': 'error',
     'no-unsafe-optional-chaining': 'error',
     'no-unused-vars': 'error',
     'no-var': 'error',
-    'prefer-const': [
-      'error',
-      {
-        destructuring: 'all',
-      },
-    ],
-    'ts/consistent-type-imports': [
-      'error',
-      {
-        prefer: 'type-imports',
-        fixStyle: 'inline-type-imports',
-      },
-    ],
-    'ts/consistent-type-definitions': [
-      'error',
-      'type',
-    ],
+    'prefer-const': ['error', {
+      destructuring: 'all',
+    }],
+    'ts/consistent-type-imports': ['error', {
+      prefer: 'type-imports',
+      fixStyle: 'inline-type-imports',
+    }],
+    'ts/consistent-type-definitions': ['error', 'type'],
     'ts/no-inferrable-types': 'error',
     'ts/no-unnecessary-condition': 'error',
     'ts/no-unnecessary-type-assertion': 'error',
@@ -60,9 +41,7 @@ module.exports = {
       'error',
       {
         selector: 'default',
-        format: [
-          'camelCase',
-        ],
+        format: ['camelCase'],
       },
       {
         selector: 'variable',
@@ -74,16 +53,11 @@ module.exports = {
       },
       {
         selector: 'import',
-        format: [
-          'camelCase',
-          'PascalCase',
-        ],
+        format: ['camelCase', 'PascalCase'],
       },
       {
         selector: 'parameter',
-        format: [
-          'camelCase',
-        ],
+        format: ['camelCase'],
         leadingUnderscore: 'allow',
       },
       {
@@ -92,54 +66,28 @@ module.exports = {
       },
       {
         selector: 'typeLike',
-        format: [
-          'PascalCase',
-        ],
+        format: ['PascalCase'],
       },
     ],
-    'style/comma-dangle': [
-      'error',
-      'always-multiline',
-    ],
-    'style/array-bracket-newline': [
-      'error',
-      {
-        minItems: 3,
-      },
-    ],
-    'style/array-element-newline': [
-      'error',
-      {
-        minItems: 3,
-      },
-    ],
+    'style/comma-dangle': ['error', 'always-multiline'],
+    'style/array-bracket-newline': ['error', {
+      minItems: 1,
+    }],
+    'style/array-element-newline': ['error', {
+      minItems: 1,
+    }],
     'style/arrow-parens': 'error',
-    'style/indent': [
-      'error',
-      2,
-    ],
+    'style/indent': ['error', 2],
     'style/key-spacing': 'error',
-    'style/linebreak-style': [
-      'error',
-      'unix',
-    ],
+    'style/linebreak-style': ['error', 'unix'],
     'style/multiline-ternary': 'error',
     'style/no-multi-spaces': 'error',
-    'style/no-multiple-empty-lines': [
-      'error',
-      {
-        max: 1,
-      },
-    ],
+    'style/no-multiple-empty-lines': ['error', {
+      max: 1,
+    }],
     'style/object-curly-newline': 'error',
     'style/object-property-newline': 'error',
-    'style/quotes': [
-      'error',
-      'single',
-    ],
-    'style/semi': [
-      'error',
-      'never',
-    ],
+    'style/quotes': ['error', 'single'],
+    'style/semi': ['error', 'never'],
   },
 }
