@@ -104,13 +104,13 @@ module.exports = {
     'style/array-bracket-newline': [
       'error',
       {
-        minItems: 1,
+        minItems: 3,
       },
     ],
     'style/array-element-newline': [
       'error',
       {
-        minItems: 1,
+        minItems: 3,
       },
     ],
     'style/arrow-parens': 'error',
@@ -118,6 +118,7 @@ module.exports = {
       'error',
       2,
     ],
+    'style/key-spacing': 'error',
     'style/linebreak-style': [
       'error',
       'unix',
