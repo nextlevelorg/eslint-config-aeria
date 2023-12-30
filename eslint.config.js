@@ -71,6 +71,12 @@ module.exports = {
         ],
       },
       {
+        selector: 'enumMember',
+        format: [
+          'PascalCase',
+        ],
+      },
+      {
         selector: 'variable',
         format: [
           'camelCase',
