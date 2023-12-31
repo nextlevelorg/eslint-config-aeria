@@ -99,7 +99,7 @@ module.exports = {
         leadingUnderscore: 'allow',
       },
       {
-        selector: 'objectLiteralProperty',
+        selector: 'property',
         format: null,
       },
       {
