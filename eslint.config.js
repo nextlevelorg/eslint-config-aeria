@@ -118,6 +118,7 @@ module.exports = {
         after: true,
       },
     ],
+    'style/brace-style': 'error',
     'style/comma-dangle': [
       'error',
       'always-multiline',
