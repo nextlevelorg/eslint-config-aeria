@@ -25,6 +25,7 @@ module.exports = {
     '**/*.d.ts',
   ],
   rules: {
+    'curly': 'error',
     'eqeqeq': 'error',
     'function-paren-newline': [
       'error',
