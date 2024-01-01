@@ -20,7 +20,8 @@ module.exports = {
     '**/*.ts',
   ],
   ignores: [
-    '**/dist/**',
+    '*/dist/**',
+    '*/release/**',
     '**/*.d.ts',
   ],
   rules: {
