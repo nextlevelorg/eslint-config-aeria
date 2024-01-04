@@ -34,6 +34,12 @@ module.exports = {
       },
     ],
     'max-statements-per-line': 'error',
+    'no-implicit-coercion': [
+      'error',
+      {
+        disallowTemplateShorthand: true,
+      },
+    ],
     'no-unsafe-optional-chaining': 'error',
     'no-unused-vars': [
       'error',
