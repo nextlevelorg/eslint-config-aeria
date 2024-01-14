@@ -10,9 +10,7 @@ module.exports = {
   languageOptions: {
     parser: parserTs,
     parserOptions: {
-      project: [
-        './tsconfig.json',
-      ],
+      project: ['./tsconfig.json'],
     },
   },
   files: [
@@ -34,12 +32,6 @@ module.exports = {
       },
     ],
     'max-statements-per-line': 'error',
-    'no-implicit-coercion': [
-      'error',
-      {
-        disallowTemplateShorthand: true,
-      },
-    ],
     'no-unsafe-optional-chaining': 'error',
     'no-unused-vars': [
       'error',
@@ -74,15 +66,11 @@ module.exports = {
       'error',
       {
         selector: 'default',
-        format: [
-          'camelCase',
-        ],
+        format: ['camelCase'],
       },
       {
         selector: 'enumMember',
-        format: [
-          'PascalCase',
-        ],
+        format: ['PascalCase'],
       },
       {
         selector: 'variable',
@@ -101,8 +89,14 @@ module.exports = {
       },
       {
         selector: 'parameter',
+        format: ['camelCase'],
+        leadingUnderscore: 'allow',
+      },
+      {
+        selector: 'method',
         format: [
           'camelCase',
+          'UPPER_CASE',
         ],
         leadingUnderscore: 'allow',
       },
@@ -112,9 +106,7 @@ module.exports = {
       },
       {
         selector: 'typeLike',
-        format: [
-          'PascalCase',
-        ],
+        format: ['PascalCase'],
       },
     ],
     'ts/type-annotation-spacing': [
@@ -124,27 +116,20 @@ module.exports = {
         after: true,
       },
     ],
-    'style/array-bracket-newline': [
-      'error',
-      {
-        minItems: 1,
-      },
-    ],
-    'style/array-element-newline': [
-      'error',
-      {
-        minItems: 1,
-      },
-    ],
-    'style/arrow-parens': 'error',
-    'style/arrow-spacing': 'error',
-    'style/block-spacing': 'error',
     'style/brace-style': 'error',
     'style/comma-dangle': [
       'error',
       'always-multiline',
     ],
-    'style/comma-spacing': 'error',
+    'style/array-bracket-newline': 'error',
+    'style/array-element-newline': [
+      'error',
+      {
+        ArrayExpression: 'always',
+        ArrayPattern: 'never',
+      },
+    ],
+    'style/arrow-parens': 'error',
     'style/indent': [
       'error',
       2,
@@ -164,10 +149,16 @@ module.exports = {
         maxEOF: 1,
       },
     ],
+    'style/object-curly-spacing': [
+      'error',
+      'always',
+    ],
     'style/object-curly-newline': [
       'error',
       {
-        ObjectExpression: 'always',
+        ObjectExpression: {
+          minProperties: 1,
+        },
         ExportDeclaration: 'always',
         ImportDeclaration: {
           multiline: true, 
