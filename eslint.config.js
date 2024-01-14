@@ -20,8 +20,8 @@ module.exports = {
     '**/*.ts',
   ],
   ignores: [
-    '*/dist/**',
     '*/release/**',
+    '**/dist/**',
     '**/*.d.ts',
   ],
   rules: {
@@ -124,11 +124,6 @@ module.exports = {
         after: true,
       },
     ],
-    'style/brace-style': 'error',
-    'style/comma-dangle': [
-      'error',
-      'always-multiline',
-    ],
     'style/array-bracket-newline': [
       'error',
       {
@@ -142,6 +137,14 @@ module.exports = {
       },
     ],
     'style/arrow-parens': 'error',
+    'style/arrow-spacing': 'error',
+    'style/block-spacing': 'error',
+    'style/brace-style': 'error',
+    'style/comma-dangle': [
+      'error',
+      'always-multiline',
+    ],
+    'style/comma-spacing': 'error',
     'style/indent': [
       'error',
       2,
