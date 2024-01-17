@@ -59,7 +59,8 @@ module.exports = {
     ],
     'ts/no-inferrable-types': 'error',
     'ts/no-unnecessary-condition': 'error',
-    'ts/no-unnecessary-type-assertion': 'error',
+    // incurred into a lot of bugs
+    // 'ts/no-unnecessary-type-assertion': 'error',
     'ts/no-unnecessary-type-constraint': 'error',
     'ts/return-await': 'error',
     'ts/naming-convention': [
