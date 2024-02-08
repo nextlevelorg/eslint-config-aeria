@@ -37,6 +37,7 @@ module.exports = {
       'error',
       {
         argsIgnorePattern: '^_',
+        ignoreRestSiblings: true,
       },
     ],
     'no-var': 'error',
@@ -130,6 +131,10 @@ module.exports = {
       },
     ],
     'style/arrow-parens': 'error',
+    'style/eol-last': [
+      'error',
+      'always',
+    ],
     'style/indent': [
       'error',
       2,
