@@ -58,11 +58,6 @@ module.exports = {
       'error',
       'type',
     ],
-    'ts/no-inferrable-types': 'error',
-    'ts/no-unnecessary-condition': 'error',
-    'ts/no-unnecessary-type-assertion': 'error',
-    'ts/no-unnecessary-type-constraint': 'error',
-    'ts/return-await': 'error',
     'ts/naming-convention': [
       'error',
       {
@@ -110,6 +105,12 @@ module.exports = {
         format: ['PascalCase'],
       },
     ],
+    'ts/no-inferrable-types': 'error',
+    'ts/no-unnecessary-condition': 'error',
+    'ts/no-unnecessary-type-assertion': 'error',
+    'ts/no-unnecessary-type-constraint': 'error',
+    'ts/return-await': 'error',
+    'ts/space-infix-ops': 'error',
     'ts/type-annotation-spacing': [
       'error',
       {
