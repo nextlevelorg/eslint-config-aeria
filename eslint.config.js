@@ -168,10 +168,10 @@ module.exports = {
         },
         ExportDeclaration: 'always',
         ImportDeclaration: {
-          multiline: true, 
+          multiline: true,
         },
         ObjectPattern: {
-          multiline: true, 
+          multiline: true,
         },
       },
     ],
