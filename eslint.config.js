@@ -155,6 +155,7 @@ module.exports = {
         maxEOF: 1,
       },
     ],
+    'style/no-trailing-spaces': 'error',
     'style/object-curly-spacing': [
       'error',
       'always',
