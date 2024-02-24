@@ -19,6 +19,7 @@
     }
   },
   "files": [
+    "esm",
     "index.js",
     "eslint.config.js"
   ],

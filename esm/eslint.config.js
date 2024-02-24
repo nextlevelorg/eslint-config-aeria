@@ -26,12 +26,7 @@ module.exports = {
     rules: {
         "curly": "error",
         "eqeqeq": "error",
-        "function-paren-newline": [
-            "error",
-            {
-                minItems: 5
-            }
-        ],
+        "function-paren-newline": "error",
         "max-statements-per-line": "error",
         "no-unsafe-optional-chaining": "error",
         "no-unused-vars": [
