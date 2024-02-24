@@ -3,19 +3,28 @@
   "version": "0.0.24",
   "description": "",
   "main": "index.js",
+  "module": "esm/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "eslint ."
+    "build": "rm -rf esm; swc *.js -d esm -C module.type=es6",
+    "prepublishOnly": "pnpm build && eslint ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "import": "./esm/index.js"
+    }
+  },
   "files": [
     "index.js",
     "eslint.config.js"
   ],
   "devDependencies": {
     "@stylistic/eslint-plugin": "^1.6.2",
+    "@swc/cli": "^0.3.9",
     "@typescript-eslint/eslint-plugin": "^6.21.0"
   },
   "peerDependencies": {
