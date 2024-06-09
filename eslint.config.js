@@ -1,7 +1,13 @@
+// @ts-check
 const stylistic = require('@stylistic/eslint-plugin')
 const typescriptPlugin = require('@typescript-eslint/eslint-plugin')
+// @ts-ignore
 const parserTs = require('@typescript-eslint/parser')
 
+
+/**
+ * @type {import('eslint').Linter.FlatConfig}
+ */
 module.exports = {
   plugins: {
     'style': stylistic,
@@ -16,9 +22,10 @@ module.exports = {
   files: [
     '**/*.js',
     '**/*.ts',
+    '**/*.jsx',
+    '**/*.tsx',
   ],
   ignores: [
-    '*/release/**',
     '**/dist/**',
     '**/*.d.ts',
   ],
