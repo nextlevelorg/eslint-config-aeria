@@ -4,7 +4,6 @@ const typescriptPlugin = require('@typescript-eslint/eslint-plugin')
 // @ts-ignore
 const parserTs = require('@typescript-eslint/parser')
 
-
 /**
  * @type {import('eslint').Linter.FlatConfig}
  */

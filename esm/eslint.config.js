@@ -1,177 +1,182 @@
-var stylistic = require("@stylistic/eslint-plugin");
-var typescriptPlugin = require("@typescript-eslint/eslint-plugin");
-var parserTs = require("@typescript-eslint/parser");
-module.exports = {
+// @ts-check
+var stylistic = require('@stylistic/eslint-plugin');
+var typescriptPlugin = require('@typescript-eslint/eslint-plugin');
+// @ts-ignore
+var parserTs = require('@typescript-eslint/parser');
+/**
+ * @type {import('eslint').Linter.FlatConfig}
+ */ module.exports = {
     plugins: {
-        "style": stylistic,
-        "ts": typescriptPlugin
+        'style': stylistic,
+        'ts': typescriptPlugin
     },
     languageOptions: {
         parser: parserTs,
         parserOptions: {
             project: [
-                "./tsconfig.json"
+                './tsconfig.json'
             ]
         }
     },
     files: [
-        "**/*.js",
-        "**/*.ts"
+        '**/*.js',
+        '**/*.ts',
+        '**/*.jsx',
+        '**/*.tsx'
     ],
     ignores: [
-        "*/release/**",
-        "**/dist/**",
-        "**/*.d.ts"
+        '**/dist/**',
+        '**/*.d.ts'
     ],
     rules: {
-        "curly": "error",
-        "eqeqeq": "error",
-        "function-paren-newline": "error",
-        "max-statements-per-line": "error",
-        "no-unsafe-optional-chaining": "error",
-        "no-unused-vars": [
-            "error",
+        'curly': 'error',
+        'eqeqeq': 'error',
+        'function-paren-newline': 'error',
+        'max-statements-per-line': 'error',
+        'no-unsafe-optional-chaining': 'error',
+        'no-unused-vars': [
+            'error',
             {
-                argsIgnorePattern: "^_",
+                argsIgnorePattern: '^_',
                 ignoreRestSiblings: true,
-                caughtErrors: "none"
+                caughtErrors: 'none'
             }
         ],
-        "no-var": "error",
-        "prefer-const": [
-            "error",
+        'no-var': 'error',
+        'prefer-const': [
+            'error',
             {
-                destructuring: "all"
+                destructuring: 'all'
             }
         ],
-        "ts/consistent-type-imports": [
-            "error",
+        'ts/consistent-type-imports': [
+            'error',
             {
-                prefer: "type-imports",
-                fixStyle: "inline-type-imports"
+                prefer: 'type-imports',
+                fixStyle: 'inline-type-imports'
             }
         ],
-        "ts/consistent-type-definitions": [
-            "error",
-            "type"
+        'ts/consistent-type-definitions': [
+            'error',
+            'type'
         ],
-        "ts/naming-convention": [
-            "error",
+        'ts/naming-convention': [
+            'error',
             {
-                selector: "default",
+                selector: 'default',
                 format: [
-                    "camelCase"
+                    'camelCase'
                 ]
             },
             {
-                selector: "enumMember",
+                selector: 'enumMember',
                 format: [
-                    "PascalCase"
+                    'PascalCase'
                 ]
             },
             {
-                selector: "variable",
+                selector: 'variable',
                 format: [
-                    "camelCase",
-                    "PascalCase",
-                    "UPPER_CASE"
+                    'camelCase',
+                    'PascalCase',
+                    'UPPER_CASE'
                 ]
             },
             {
-                selector: "import",
+                selector: 'import',
                 format: [
-                    "camelCase",
-                    "PascalCase"
+                    'camelCase',
+                    'PascalCase'
                 ]
             },
             {
-                selector: "parameter",
+                selector: 'parameter',
                 format: [
-                    "camelCase"
+                    'camelCase'
                 ],
-                leadingUnderscore: "allow"
+                leadingUnderscore: 'allow'
             },
             {
-                selector: "method",
+                selector: 'method',
                 format: [
-                    "camelCase",
-                    "UPPER_CASE"
+                    'camelCase',
+                    'UPPER_CASE'
                 ],
-                leadingUnderscore: "allow"
+                leadingUnderscore: 'allow'
             },
             {
-                selector: "property",
+                selector: 'property',
                 format: null
             },
             {
-                selector: "typeLike",
+                selector: 'typeLike',
                 format: [
-                    "PascalCase"
+                    'PascalCase'
                 ]
             }
         ],
-        "ts/no-inferrable-types": "error",
-        "ts/no-unnecessary-condition": "error",
-        "ts/no-unnecessary-type-assertion": "error",
-        "ts/no-unnecessary-type-constraint": "error",
-        "ts/return-await": "error",
-        "ts/space-infix-ops": "error",
-        "ts/type-annotation-spacing": [
-            "error",
+        'ts/no-inferrable-types': 'error',
+        'ts/no-unnecessary-condition': 'error',
+        'ts/no-unnecessary-type-assertion': 'error',
+        'ts/no-unnecessary-type-constraint': 'error',
+        'ts/return-await': 'error',
+        'ts/space-infix-ops': 'error',
+        'ts/type-annotation-spacing': [
+            'error',
             {
                 before: false,
                 after: true
             }
         ],
-        "style/brace-style": "error",
-        "style/comma-dangle": [
-            "error",
-            "always-multiline"
+        'style/brace-style': 'error',
+        'style/comma-dangle': [
+            'error',
+            'always-multiline'
         ],
-        "style/array-bracket-newline": "error",
-        "style/array-element-newline": [
-            "error",
+        'style/array-bracket-newline': 'error',
+        'style/array-element-newline': [
+            'error',
             {
-                ArrayExpression: "always",
-                ArrayPattern: "never"
+                ArrayExpression: 'always',
+                ArrayPattern: 'never'
             }
         ],
-        "style/arrow-parens": "error",
-        "style/eol-last": [
-            "error",
-            "always"
+        'style/arrow-parens': 'error',
+        'style/eol-last': [
+            'error',
+            'always'
         ],
-        "style/indent": [
-            "error",
+        'style/indent': [
+            'error',
             2
         ],
-        "style/key-spacing": "error",
-        "style/linebreak-style": [
-            "error",
-            "unix"
+        'style/key-spacing': 'error',
+        'style/linebreak-style': [
+            'error',
+            'unix'
         ],
-        "style/multiline-ternary": "error",
-        "style/no-multi-spaces": "error",
-        "style/no-multiple-empty-lines": [
-            "error",
+        'style/multiline-ternary': 'error',
+        'style/no-multi-spaces': 'error',
+        'style/no-multiple-empty-lines': [
+            'error',
             {
                 max: 1,
                 maxBOF: 0,
                 maxEOF: 1
             }
         ],
-        "style/no-trailing-spaces": "error",
-        "style/object-curly-spacing": [
-            "error",
-            "always"
+        'style/no-trailing-spaces': 'error',
+        'style/object-curly-spacing': [
+            'error',
+            'always'
         ],
-        "style/object-curly-newline": [
-            "error",
+        'style/object-curly-newline': [
+            'error',
             {
                 ObjectExpression: {
                     minProperties: 1
                 },
-                ExportDeclaration: "always",
+                ExportDeclaration: 'always',
                 ImportDeclaration: {
                     multiline: true
                 },
@@ -180,14 +185,14 @@ module.exports = {
                 }
             }
         ],
-        "style/object-property-newline": "error",
-        "style/quotes": [
-            "error",
-            "single"
+        'style/object-property-newline': 'error',
+        'style/quotes': [
+            'error',
+            'single'
         ],
-        "style/semi": [
-            "error",
-            "never"
+        'style/semi': [
+            'error',
+            'never'
         ]
     }
 };
