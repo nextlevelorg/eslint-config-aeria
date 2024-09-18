@@ -49,6 +49,13 @@ module.exports = {
         destructuring: 'all',
       },
     ],
+    'ts/consistent-type-assertions': [
+      'error',
+      {
+        assertionStyle: 'as',
+        objectLiteralTypeAssertions: 'never',
+      },
+    ],
     'ts/consistent-type-imports': [
       'error',
       {
