@@ -49,6 +49,7 @@ module.exports = {
         destructuring: 'all',
       },
     ],
+    'ts/await-thenable': 'error',
     'ts/consistent-type-assertions': [
       'error',
       {
