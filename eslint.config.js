@@ -7,7 +7,7 @@ const parserTs = require('@typescript-eslint/parser')
 /**
  * @type {import('eslint').Linter.FlatConfig}
  */
-module.exports = {
+const srcRules = {
   plugins: {
     'style': stylistic,
     'ts': typescriptPlugin,
@@ -19,12 +19,11 @@ module.exports = {
     },
   },
   files: [
-    '**/*.js',
     '**/*.ts',
-    '**/*.jsx',
-    '**/*.tsx',
   ],
   ignores: [
+    '**/*.spec.ts',
+    '**/fixtures/**/*.ts',
     '**/dist/**',
     '**/*.d.ts',
   ],
@@ -54,7 +53,6 @@ module.exports = {
       'error',
       {
         assertionStyle: 'as',
-        objectLiteralTypeAssertions: 'never',
       },
     ],
     'ts/consistent-type-imports': [
@@ -196,3 +194,110 @@ module.exports = {
     ],
   },
 }
+
+const testRules = {
+  plugins: {
+    'style': stylistic,
+  },
+  languageOptions: {
+    parser: parserTs,
+  },
+  files: [
+    '**/*.spec.ts',
+    '**/fixtures/**/*.ts',
+  ],
+  rules: {
+    'curly': 'error',
+    'eqeqeq': 'error',
+    'function-paren-newline': 'error',
+    'max-statements-per-line': 'error',
+    'no-unsafe-optional-chaining': 'error',
+    'no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+        ignoreRestSiblings: true,
+        caughtErrors: 'none',
+      },
+    ],
+    'no-var': 'error',
+    'prefer-const': [
+      'error',
+      {
+        destructuring: 'all',
+      },
+    ],
+    'style/brace-style': 'error',
+    'style/comma-dangle': [
+      'error',
+      'always-multiline',
+    ],
+    'style/array-bracket-newline': 'error',
+    'style/array-element-newline': [
+      'error',
+      {
+        ArrayExpression: 'always',
+        ArrayPattern: 'never',
+      },
+    ],
+    'style/arrow-parens': 'error',
+    'style/eol-last': [
+      'error',
+      'always',
+    ],
+    'style/indent': [
+      'error',
+      2,
+    ],
+    'style/key-spacing': 'error',
+    'style/linebreak-style': [
+      'error',
+      'unix',
+    ],
+    'style/multiline-ternary': 'error',
+    'style/no-multi-spaces': 'error',
+    'style/no-multiple-empty-lines': [
+      'error',
+      {
+        max: 1,
+        maxBOF: 0,
+        maxEOF: 1,
+      },
+    ],
+    'style/no-trailing-spaces': 'error',
+    'style/object-curly-spacing': [
+      'error',
+      'always',
+    ],
+    'style/object-curly-newline': [
+      'error',
+      {
+        ObjectExpression: {
+          minProperties: 1,
+        },
+        ExportDeclaration: 'always',
+        ImportDeclaration: {
+          multiline: true,
+        },
+        ObjectPattern: {
+          multiline: true,
+        },
+      },
+    ],
+    'style/object-property-newline': 'error',
+    'style/quotes': [
+      'error',
+      'single',
+    ],
+    'style/semi': [
+      'error',
+      'never',
+    ],
+  },
+}
+
+module.exports = {
+  srcRules,
+  testRules,
+}
+
