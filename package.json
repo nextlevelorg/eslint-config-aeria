@@ -1,37 +1,15 @@
 {
-  "name": "eslint-config-aeria",
-  "version": "0.0.31",
-  "description": "",
-  "main": "index.js",
-  "module": "esm/index.mjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf esm; swc *.js -d esm -C module.type=es6",
-    "prepublishOnly": "pnpm build && eslint \\*.js"
-  },
-  "keywords": [],
-  "author": "",
+  "name": "aeria-eslint",
+  "private": true,
+  "packageManager": "pnpm@9.1.0",
   "license": "ISC",
-  "exports": {
-    ".": {
-      "require": "./index.js",
-      "import": "./esm/index.js"
-    }
-  },
-  "files": [
-    "esm",
-    "index.js",
-    "eslint.config.js"
-  ],
   "devDependencies": {
     "@changesets/cli": "^2.27.8",
-    "@stylistic/eslint-plugin": "^2.1.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@swc/cli": "^0.3.12",
-    "@typescript-eslint/eslint-plugin": "^7.12.0"
-  },
-  "peerDependencies": {
-    "@stylistic/eslint-plugin": "^2.1.0",
-    "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.12.0"
+    "@types/node": "^20.14.9",
+    "husky": "^9.0.11",
+    "typescript": "^5.5.2"
   }
 }
