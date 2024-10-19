@@ -1,6 +1,0 @@
-#!/bin/sh
-
-if ! test $GITHUB_ACTIONS && ! test $SKIP && [ $(git branch --show-current) == "master" ]; then
-  pnpm -r lint
-fi
-
